@@ -19,11 +19,20 @@ jobs:
           node-version: "24"
           registry-url: "https://registry.npmjs.org"
 
+      - name: Update npm
+        run: npm install -g npm@latest
+
       - name: Install dependencies
         run: npm ci
 
       - name: Build
         run: npm run build
+
+      - name: Debug npm whoami
+        run: npm whoami || echo "whoami failed"
+
+      - name: Debug npm view
+        run: npm view create-vite-babylonjs-ts || echo "view failed"
 
       - name: Publish to npm
         run: npm publish --provenance --access public
