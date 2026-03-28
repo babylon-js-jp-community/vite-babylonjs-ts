@@ -1,6 +1,6 @@
 {
   "name": "vite-babylonjs-ts",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +11,7 @@
     "@babylonjs/core": "^9.0.0"
   },
   "devDependencies": {
-    "typescript": "^6.0.2",
-    "vite": "^8.0.3"
+    "typescript": "^5.9.0 || ^6.0.2",
+    "vite": "^8.0.0"
   }
 }
