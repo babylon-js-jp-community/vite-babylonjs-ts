@@ -1,6 +1,6 @@
 {
-  "name": "vite-babylonjs-ts",
-  "version": "1.0.1",
+  "name": "create-vite-babylonjs-ts",
+  "version": "1.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
