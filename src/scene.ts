@@ -1,11 +1,11 @@
-import { Engine } from "@babylonjs/core/Engines/engine";
-import { Scene } from "@babylonjs/core/scene";
 import { ArcRotateCamera } from "@babylonjs/core/Cameras/arcRotateCamera";
+import { Engine } from "@babylonjs/core/Engines/engine";
 import { HemisphericLight } from "@babylonjs/core/Lights/hemisphericLight";
-import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
-import { Vector3 } from "@babylonjs/core/Maths/math.vector";
 import { StandardMaterial } from "@babylonjs/core/Materials/standardMaterial";
 import { Color3 } from "@babylonjs/core/Maths/math.color";
+import { Vector3 } from "@babylonjs/core/Maths/math.vector";
+import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
+import { Scene } from "@babylonjs/core/scene";
 
 export const createScene = (engine: Engine): Scene => {
   const scene = new Scene(engine);
@@ -27,10 +27,6 @@ export const createScene = (engine: Engine): Scene => {
   const material = new StandardMaterial("boxMaterial", scene);
   material.diffuseColor = new Color3(0.4, 0.4, 1.0);
   box.material = material;
-
-  scene.registerBeforeRender(() => {
-    box.rotation.y += 0.01;
-  });
 
   return scene;
 };
